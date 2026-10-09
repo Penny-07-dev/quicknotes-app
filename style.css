@@ -1,0 +1,249 @@
+
+/* QuickNotes - Main Styles */
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #087f8c;
+    --header-color: #075e68;
+    --background-color: #f0f5f7;
+    --card-color: #ffffff;
+    --text-color: #243746;
+    --muted-color: #64748b;
+    --border-color: #dbe4e8;
+    --personal-color: #0d9488;
+    --work-color: #991b1b;
+    --study-color: #2563eb;
+    --error-color: #dc2626;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: var(--header-color);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1rem;
+}
+
+/* Main content */
+main {
+    max-width: 700px;
+    width: 90%;
+    margin: 30px auto;
+}
+
+/* Sections */
+section {
+    background-color: var(--card-color);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+section h2 {
+    margin-bottom: 18px;
+    color: var(--header-color);
+}
+
+/* Form layout */
+#note-form {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.form-group {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: white;
+    color: var(--text-color);
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 1px;
+}
+
+/* Buttons */
+button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--header-color);
+}
+
+button:focus-visible {
+    outline: 2px solid var(--text-color);
+    outline-offset: 3px;
+}
+
+/* Error message */
+#error-message {
+    color: var(--error-color);
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+/* Search */
+.search-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 15px;
+}
+
+#note-count {
+    color: var(--muted-color);
+    margin-bottom: 15px;
+}
+
+/* Notes list */
+#notes-list {
+    list-style: none;
+}
+
+.note-card {
+    padding: 16px;
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--primary-color);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    background-color: white;
+    overflow-wrap: anywhere;
+}
+
+.category-personal {
+    border-left-color: var(--personal-color);
+}
+
+.category-work {
+    border-left-color: var(--work-color);
+}
+
+.category-study {
+    border-left-color: var(--study-color);
+}
+
+.note-text {
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+}
+
+.note-category {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 12px;
+    background-color: #e2e8f0;
+    color: var(--text-color);
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.note-date {
+    display: block;
+    color: var(--muted-color);
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.delete-btn {
+    background-color: #b91c1c;
+    padding: 7px 12px;
+    font-size: 0.9rem;
+}
+
+.delete-btn:hover {
+    background-color: #7f1d1d;
+}
+
+.empty-message {
+    color: var(--muted-color);
+    padding: 12px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--muted-color);
+    font-size: 0.9rem;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    #note-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    #note-form button {
+        width: 100%;
+    }
+}
