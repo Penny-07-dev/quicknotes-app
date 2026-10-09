@@ -45,3 +45,10 @@ No additional libraries or packages are required.
 ## Author
 
 Created as part of a web development learning project.
+
+## Future Improvements
+
+- Add a button to clear all notes after confirmation.
+- Allow users to edit existing notes.
+- Add note filtering by category.
+- Improve accessibility and usability through further testing.
